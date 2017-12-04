@@ -284,3 +284,36 @@ footer i.fa {
 
 .site_contact { background: #333; height: 300px; }
 
+@media screen and (min-width: 480px) {
+
+.body {
+    font-size: .8rem;
+}
+    .company_logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .company_logo img {
+        height: 1.5rem;
+    }
+    div#slider-connect{
+        height: 1rem;
+        margin: 10% 0;
+    }
+    .noUi-horizontal .noUi-handle {
+        width: 30px!important;
+        height: 35px!important;
+}
+    .btn-donate {
+        padding: .5rem;
+        font-size: .8rem;
+    }
+    footer .social_icons {
+        padding: .5rem;
+    }
+    .site_contact { 
+        background: #333; height: 30px; 
+    }
+}
+
