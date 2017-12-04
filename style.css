@@ -64,7 +64,6 @@ div#slider-connect {
 }
 .navbar {
     clear: both;
-    z-index: -1;
     color: #444;
     padding: 2% 2% 1%;
     font-weight: 600;
@@ -291,7 +290,7 @@ footer i.fa {
 }
     .company_logo {
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 10px;
     }
     .company_logo img {
