@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Donation form">
     <meta name="author" content="A.Walter">
-    <title>Donation</title>
+    <title>SQ_TEST</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin-ext" rel="stylesheet">
+    <link href="nouislider.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/87c6a30ce1.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
-     <link href="nouislider.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
     <script src="nouislider.min.js"></script>
     <script src="script.js"></script>
   </head>
@@ -35,12 +32,12 @@
       </div>
     <a class="company_logo"><img src="logo.png" title="logo"></a>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light clearfix">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light clearfix">
       <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-        <div class="navbar-nav m-auto">
+        <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="#" title="About Us">About Us <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#" title="Media Centre">Media Centre</a>
           <a class="nav-item nav-link" href="#" title="Membershi">Membership</a>
@@ -55,26 +52,26 @@
   <div class="wrapper">
       <div class="container">
         <section class="section_first">
-          <h1 class="text-danger">Donate our cause</h1>
+          <h2 class="text-danger">Donate our cause</h2>
           <p class="value_txt"><span class="amount"> 39$</span> <span id="info">can help us improve this product<span></p>
           <div id="slider-connect"></div>
-          <span id="value">$</span>
+          <span id="value"></span>
            <div class="form-check mt-3">
             <label class="form-check-label">
               <input type="checkbox" class="form-check-input">
-              Yes I would like to donate this amount monthly
+              <h6>Yes I would like to donate this amount monthly</h6>
             </label>
           </div>
         </section>
           <div style="display:none;"  id="showDiv">
           <section class="section_second"  >
             <h6><span class="number">2</span>&nbsp;Enter your information</h6>
-          <form class="cmxform" id="dataForm" method="get" action="">
+          <form class="cmxform" id="dataForm" method="get" action="" >
             <div class="row">
               <div class="col-md-6 col-12">
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control form-control-lg" id="name" aria-describedby="name" placeholder="First Last" value='' >
+                  <input type="text" class="form-control form-control-lg" id="name" minlength="5" type="text" name="name" aria-describedby="name" placeholder="First Last" value='' required>
                 </div>
               </div>
               <div class="col-md-6 col-12">
@@ -94,28 +91,29 @@
               <div class="col-md-6 col-12">
                 <div class="form-group">
                   <label for="city">City, State</label>
-                  <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Pitsburg,PA" value=''>
+                  <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Pitsburg,PA" value='';>
                 </div>
               </div>
             </div>
+            <span class="badge badge-pill badge-secondary">Confirm</span>
           </form>
         </section>
 
-
+ </div>
         
-          <section class="section_third">
+          <section class="section_third " style="display:none;"  id="showDiv1">
             <h6><span class="number">3</span>&nbsp; Credit card info</h6>
             <form>
                 <div class="form-group" id="cc_info">
                     <label for="cc_info input">
                       <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
                     </label>
-                    <input type="text" class="form-control form-control-lg" id="creditcard" placeholder="1234 5678 9012 3456">
+                    <input type="text" class="form-control form-control-lg credit-card-input" id="creditcard" placeholder="1234 5678 9012 3456">
                       <small id="creditcard" class="form-text text-muted">Please enter your credit card number.</small>
                 </div>
             </form>
           </section>
-        </div>
+      
            <button type="button" class="btn btn-donate" id="showButton" name="answer"><strong>Donate</strong></button>
       </div>
 
@@ -140,10 +138,8 @@
 
 
       $('#showButton').click(function() {
-       $('#showDiv').toggle('slow');
+       $('#showDiv').show('slow');
       }); 
-
-      
 
       var connectSlider = document.getElementById('slider-connect');
 
@@ -167,9 +163,14 @@
         else if(sum<100) $("#info").html('goes a long way. If you would like to consider becoming a sponsor, please contact us')
       });
 
-        $(document).ready(function(){
+      $(document).ready(function(){
+         
         $("#dataForm").validate({
             rules: {
+              name: {
+              required: true,
+              minlength: 3,
+              },
               street: {
                 required: true,
                 minlength: 4
@@ -188,13 +189,17 @@
               city: "Please enter your city and state, separated by a comma"
               }
             }
-        );
-
-    });
-        $('#dataForm input').on('keypress', function() {
-          $(this).valid();
+          );
+      });
+  
+      $( ".badge" ).click(function() {
+        $('#showDiv1').show('slow');
       });
 
+
+      $('#dataForm input').on('keypress', function() {
+        $(this).valid();
+      });
 
     </script>
             

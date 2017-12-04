@@ -9,21 +9,39 @@
 .bg-light {
     background: #e8e8e8!important;
 }
+.error {
+    color: #ae0d15!important;
+}
+
 body {
     color: #444;
-    position: relative;
+    position:relative;
 }
+
+/*LOGO*/
+
 .company_logo {
     position: absolute;
     top: 10px;
     left: 40px;
+    z-index: 1;
 }
 
-/*PROGRESSBAR*/
+/*NAVBAR*/
 
-.caption {
-  display: none;
+.navbar {
+    clear: both;
+    color: #444;
+    font-weight: 600;
+    padding: 1%;
 }
+a.nav-item.nav-link {
+    margin-right: 6vw;
+}
+
+
+/*UI_SLIDER*/
+
 .amount { color:#ae0d15; font-weight: 600; }
 
 div#slider-connect {
@@ -51,7 +69,6 @@ div#slider-connect {
     border-bottom-left-radius: 1.5rem;
 }
 
-
 /*SEARCHBAR*/
 
 .searchbar {
@@ -61,12 +78,6 @@ div#slider-connect {
     -webkit-box-shadow: 0px 4px 5px 0px rgba(227, 227, 227, 1);
     -moz-box-shadow: 0px 4px 5px 0px rgba(227, 227, 227, 1);
     box-shadow: 0px 4px 5px 0px rgba(227, 227, 227, 1);
-}
-.navbar {
-    clear: both;
-    color: #444;
-    padding: 2% 2% 1%;
-    font-weight: 600;
 }
 
 .sb-search {
@@ -116,9 +127,7 @@ input[type="search"].sb-search-input {
 .sb-search-input::-moz-placeholder {
     color: #fff;
 }
-.sb-search-input:-ms-input-placeholder {
-    color: #fff;
-}
+
 .sb-icon-search, .sb-search-submit {
     width: 38px;
     height: 38px;
@@ -211,14 +220,6 @@ input.error {
     border-top: 1px solid #ccc;
 }
 
-
-/*NAVBAR*/
-
-a.nav-item.nav-link {
-    padding: 0 3rem!important;
-}
-
-
 /*WRAPPER*/
 
 .wrapper {
@@ -228,6 +229,9 @@ a.nav-item.nav-link {
     box-shadow: 0px 4px 5px 0px rgba(227, 227, 227, 1);
     padding-bottom: 2%;
 }
+
+/*BUTTON*/
+
 .btn-donate {
     background: #ae0d15;
     border-radius: .3rem;
@@ -249,7 +253,6 @@ a.nav-item.nav-link {
     border-color: #f82b39!important;
     box-shadow: none;
 }
-
 
 /*FOOTER*/
 
@@ -287,11 +290,18 @@ footer i.fa {
 
 .site_contact { background: #333; height: 300px; }
 
+/*MEDIA*/
+@media screen and (max-width: 1260px) {
+      .company_logo img {
+        height: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 540px) and (min-width: 300px) {
 
-.body {
-    font-size: .8rem;
-}
+    .body {
+        font-size: .8rem;
+    }
     .company_logo {
         position: absolute;
         top: 5px;
