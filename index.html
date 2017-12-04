@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Donation form">
+    <meta name="author" content="A.Walter">
+    <title>Donation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin-ext" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/87c6a30ce1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+     <link href="nouislider.min.css" rel="stylesheet">
+    <script src="nouislider.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="searchbar">
+        <div class="sb-search" id="sb-search">
+          <form class="form-inline">
+              <input class="sb-search-input " onkeyup="buttonUp();" placeholder="Search" onblur="monkey();" type="search" value="" name="search" id="search">
+              <input class="sb-search-submit" type="submit"  value="">
+              <span class="btn btn-red my-2 my-sm-0 sb-icon-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></span>
+          </form>
+        </div>
+      </div>
+    <a class="company_logo"><img src="images/logo.png" title="logo"></a>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light clearfix">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+        <div class="navbar-nav m-auto">
+          <a class="nav-item nav-link" href="#" title="About Us">About Us <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#" title="Media Centre">Media Centre</a>
+          <a class="nav-item nav-link" href="#" title="Membershi">Membership</a>
+          <a class="nav-item nav-link" href="#" title=Events"">Events</a>
+          <a class="nav-item nav-link" href="#" title="Publications">Publications</a>
+          <a class="nav-item nav-link" href="#" title="Research">Research</a>
+          <a class="nav-item nav-link" href="#" title="Store" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </nav>
+
+  <div class="wrapper">
+      <div class="container">
+        <section class="section_first">
+          <h1 class="text-danger">Donate our cause</h1>
+          <p class="value_txt"><span class="amount"> 39$</span> <span id="info">can help us improve this product<span></p>
+          <div id="slider-connect"></div>
+          <span id="value">$</span>
+           <div class="form-check mt-3">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              Yes I would like to donate this amount monthly
+            </label>
+          </div>
+        </section>
+          <div style="display:none;"  id="showDiv">
+          <section class="section_second"  >
+            <h6><span class="number">2</span>&nbsp;Enter your information</h6>
+          <form class="cmxform" id="dataForm" method="get" action="">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control form-control-lg" id="name" aria-describedby="name" placeholder="First Last" value='' >
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="cemail">Email address</label>
+                  <input type="email" name="email" class="form-control form-control-lg"  id="cemail" aria-describedby="email" placeholder="your@email.com" value=''>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control form-control-lg" id="address" name="address" placeholder="123 Main St, Apt.2" value='' >
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="city">City, State</label>
+                  <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Pitsburg,PA" value=''>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+
+        
+          <section class="section_third">
+            <h6><span class="number">3</span>&nbsp; Credit card info</h6>
+            <form>
+                <div class="form-group" id="cc_info">
+                    <label for="cc_info input">
+                      <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                    </label>
+                    <input type="text" class="form-control form-control-lg" id="creditcard" placeholder="1234 5678 9012 3456">
+                      <small id="creditcard" class="form-text text-muted">Please enter your credit card number.</small>
+                </div>
+            </form>
+          </section>
+        </div>
+           <button type="button" class="btn btn-donate" id="showButton" name="answer"><strong>Donate</strong></button>
+      </div>
+
+    </div>
+
+
+    <footer>
+      <div class="social_icons">
+        <a href="https://twitter.com/" title="twitter" target="_blank"> <i class="fa fa-twitter text-white" aria-hidden="true"></i></a>
+        <a href="https://facebook.com/" title="facebook" target="_blank"><i class="fa fa-facebook text-white" aria-hidden="true"></i></a>
+        <a href="https://youtube.com/" title="youtube" target="_blank"><i class="fa fa-youtube text-white" aria-hidden="true"></i></a>
+        <a href="https://flickr.com/" title="flickr" target="_blank"><i class="fa fa-flickr text-white" aria-hidden="true"></i></a>
+        <a href="https://gmail.com/" title="our twitter" target="_blank"><i class="fa fa-envelope text-white" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/" title="our twitter" target="_blank"><i class="fa fa-spotify text-white" aria-hidden="true"></i></a>
+      </div>
+    </footer>
+
+     <div class="site_contact"> </div>
+
+
+    <script>
+
+
+      $('#showButton').click(function() {
+       $('#showDiv').toggle('slow');
+      }); 
+
+      
+
+      var connectSlider = document.getElementById('slider-connect');
+
+      noUiSlider.create(connectSlider, {
+        start: 39,
+        connect: [true, false],
+        range: {
+          'min': 0,
+          'max': 100
+        }
+      });
+
+      connectSlider.noUiSlider.on('update', function ( values, handle ) {
+        var sum = parseInt(values[0]);
+        console.log('kkkk', values)
+        $(".amount").html('$'+sum)
+        $('#value').html(values[0])
+        if(sum<20) $("#info").html('will let us to add a few new modules')
+        else if(sum<50) $("#info").html('can help us improve this product')
+        else if(sum<80) $("#info").html('can help us expand this product to other platforms')
+        else if(sum<100) $("#info").html('goes a long way. If you would like to consider becoming a sponsor, please contact us')
+      });
+
+        $(document).ready(function(){
+        $("#dataForm").validate({
+            rules: {
+              street: {
+                required: true,
+                minlength: 4
+              },
+              city: {
+                  required: true,
+                  minlength: 4
+              },
+              address: {
+                required: true,
+                minlength: 4
+              }
+            },
+            messages: {
+              address:  "Please enter your street address",
+              city: "Please enter your city and state, separated by a comma"
+              }
+            }
+        );
+
+    });
+        $('#dataForm input').on('keypress', function() {
+          $(this).valid();
+      });
+
+
+    </script>
+            
+  </body>
+</html>
+
+          
