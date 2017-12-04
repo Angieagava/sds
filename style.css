@@ -134,7 +134,6 @@ input[type="search"].sb-search-input {
 }
 .sb-search-submit {
     background: red;
-    /* IE needs this */
     color: #fff;
     opacity: 0;
     color: transparent;
@@ -246,6 +245,11 @@ a.nav-item.nav-link {
     border: 1px solid #ae0d15;
 }
 
+.btn-donate:focus {
+    border-color: #f82b39!important;
+    box-shadow: none;
+}
+
 
 /*FOOTER*/
 
@@ -303,6 +307,7 @@ footer i.fa {
     .noUi-horizontal .noUi-handle {
         width: 30px!important;
         height: 35px!important;
+        left: -24px!important;
 }
     .btn-donate {
         padding: .5rem;
