@@ -27,7 +27,7 @@ body {
 .amount { color:#ae0d15; font-weight: 600; }
 
 div#slider-connect {
-    height: 3rem;
+    height: 2.5rem;
     border-radius: 1.5rem;
     margin: 5% 0;
 }
