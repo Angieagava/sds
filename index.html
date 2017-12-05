@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin-ext" rel="stylesheet">
     <link href="nouislider.min.css" rel="stylesheet">
+    <link href="/update/this/path/creditcardjs-v0.10.13.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/87c6a30ce1.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -103,16 +104,78 @@
         
           <section class="section_third " style="display:none;"  id="showDiv1">
             <h6><span class="number">3</span>&nbsp; Credit card info</h6>
-            <form>
-                <div class="form-group" id="cc_info">
-                    <label for="cc_info input">
-                      <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                    </label>
-                    <input type="text" class="form-control form-control-lg" id="CardNumber" name="CardNumber" mnax length="19" placeholder="1234 5678 9012 3456">
-                      <small id="creditcard" class="form-text text-muted">Please enter your credit card number.</small>
+          <form>
+              <div class="ccjs-card form-group" id="cc_info" >
+                <label class="ccjs-number cc_info input">
+                  <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                </label>
+                <input name="card-number" class="ccjs-number form-control form-control-lg" placeholder="1234 5678 9012 3456">
+                <small id="creditcard" class="form-text text-muted">Please enter your credit card number.</small>
                 </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                <label class="ccjs-csc">
+                  <input name="csc" class="ccjs-csc form-control" placeholder="security code">
+                </label>
+              </div>
+               <div class="col">
+                <label class="ccjs-name ">
+                  <input name="name" class="ccjs-name form-control" placeholder="name">
+                </label>
+              </div>
+               <div class="col">
+                <div class="form-group">
+                  <fieldset class="ccjs-expiration form-control">
+                    <select name="month" class="ccjs-month">
+                      <option selected disabled>MM</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select name="year" class="ccjs-year">
+                      <option selected disabled>YY</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>
+                <div class="col">
+                <select name="card-type" class="ccjs-hidden-card-type form-control">
+                  <option value="amex" class="ccjs-amex">American Express</option>
+                  <option value="discover" class="ccjs-discover">Discover</option>
+                  <option value="mastercard" class="ccjs-mastercard">MasterCard</option>
+                  <option value="visa" class="ccjs-visa">Visa</option>
+                  <option value="maestro" class="maestro">Maestro</option>
+                  <option value="unionpay" class="unionpay">UnionPay</option>
+                  <option value="visa-electron" class="visa-electron">Visa Electron</option>
+                </select>
+              </div>
+            </div>
             </form>
+            <script src="/update/this/path/creditcardjs-v0.10.13.min.js"></script>
           </section>
+
+
       
            <button type="button" class="btn btn-donate" id="showButton" name="answer"><strong>Donate</strong></button>
       </div>
