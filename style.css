@@ -288,6 +288,11 @@ footer .social_icons a {
 footer i.fa {
     margin-left: -3px;
 }
+select.ccjs-month.form {
+    border: 0!important;
+    color: #495057;
+    border-radius: .25rem;
+}
 
 .site_contact { background: #333; height: 300px; }
 
