@@ -44,7 +44,7 @@
           <a class="nav-item nav-link" href="#" title=Events"">Events</a>
           <a class="nav-item nav-link" href="#" title="Publications">Publications</a>
           <a class="nav-item nav-link" href="#" title="Research">Research</a>
-          <a class="nav-item nav-link" href="#" title="Store" target="_blank"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          <a class="nav-item nav-link" href="#" title="Store" target="_blank"><img src="cart.png" title="logo"></a>
         </div>
       </div>
     </nav>
@@ -108,7 +108,7 @@
                     <label for="cc_info input">
                       <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
                     </label>
-                    <input type="text" class="form-control form-control-lg credit-card-input" id="creditcard" placeholder="1234 5678 9012 3456">
+                    <input type="text" class="form-control form-control-lg" id="CardNumber" name="CardNumber" mnax length="19" placeholder="1234 5678 9012 3456">
                       <small id="creditcard" class="form-text text-muted">Please enter your credit card number.</small>
                 </div>
             </form>
@@ -126,8 +126,8 @@
         <a href="https://facebook.com/" title="facebook" target="_blank"><i class="fa fa-facebook text-white" aria-hidden="true"></i></a>
         <a href="https://youtube.com/" title="youtube" target="_blank"><i class="fa fa-youtube text-white" aria-hidden="true"></i></a>
         <a href="https://flickr.com/" title="flickr" target="_blank"><i class="fa fa-flickr text-white" aria-hidden="true"></i></a>
-        <a href="https://gmail.com/" title="our twitter" target="_blank"><i class="fa fa-envelope text-white" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/" title="our twitter" target="_blank"><i class="fa fa-spotify text-white" aria-hidden="true"></i></a>
+        <a href="https://gmail.com/" title="gmail" target="_blank"><i class="fa fa-envelope text-white" aria-hidden="true"></i></a>
+        <a href="https://spotify.com/" title="spotify" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
       </div>
     </footer>
 
@@ -200,6 +200,8 @@
       $('#dataForm input').on('keypress', function() {
         $(this).valid();
       });
+
+
 
     </script>
             

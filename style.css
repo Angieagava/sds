@@ -266,6 +266,7 @@ footer .social_icons {
 }
 footer .social_icons a {
     background: #ae0d15;
+    color: #fff;
     border-radius: 50%;
     width: 34px;
     height: 34px;
