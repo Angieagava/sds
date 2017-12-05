@@ -96,7 +96,7 @@
                 </div>
               </div>
             </div>
-            <span class="badge badge-pill badge-secondary">Confirm</span>
+          <!--  <span class="badge badge-pill badge-secondary">Confirm</span>-->
           </form>
         </section>
 
@@ -255,13 +255,21 @@
           );
       });
   
+  /*
       $( ".badge" ).click(function() {
         $('#showDiv1').show('slow');
-      });
+      });*/
 
 
-      $('#dataForm input').on('keypress', function() {
+      $('#dataForm input').on('change', function() {
         $(this).valid();
+        var len = $('#dataForm input').length;
+
+       $('#dataForm input').each(function(){
+        if( $(this).val().length ) len -= 1;
+        console.log('ddddd', len)
+        if(len==0) $('#showDiv1').show('slow');
+       }) 
       });
 
 
